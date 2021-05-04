@@ -25,6 +25,10 @@
     justify-content: center;
 }
 
+.row a{
+    z-index: -1;
+    opacity: 0.8;
+}
 .row img{
     width :214px;
     height:180;
@@ -48,6 +52,20 @@
     border: 1px solid black;
 }
 
+.task-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.task2 {
+    background-color: black;
+    width: 500px;
+    height: 500px;
+}
+
+.hidden {
+    display: none !important;
+}
 
 @media screen and (max-width: 450px) {
     .header img{   
