@@ -1,0 +1,133 @@
+body{
+    margin : 0px;
+    font-family: 'Titillium Web', sans-serif;
+    background: linear-gradient(to right, black,#e39494);
+}
+header{
+    font-size: 14px;
+    background-color: black;
+    color: navajowhite;
+    padding-top: 1px;
+    text-align: center;
+}
+.context{
+    width: 320px;
+    margin-inline: auto;
+    margin-top: 100px;
+}
+.context h1{
+    color: navajowhite;
+    float: left;
+    border-bottom: 3px solid black;
+    margin-bottom: 10%;
+}
+
+.context hr{
+    margin-top: 50px;
+}
+
+.textbox {
+    width: 100%;
+    overflow: hidden;
+    font-size: 20px;
+    padding: 8px 0;
+    margin: 8px 0;
+    border-bottom: 1px solid;
+}
+.textbox i {
+    color: navajowhite;
+    float: left;
+    text-align: center;  
+    padding-right: 7px;  
+}
+.textbox input {
+    border: none;
+    outline: none;
+    background : none;
+    float : left;
+    width: auto;
+    font-size: 18px;
+    color : navajowhite;
+    margin: 0 10px;
+}
+
+.btn{
+    width : 100%;
+    background: none;
+    border : 2px solid black;
+    color: navajowhite;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 40px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.headerWithLogout{
+    display: flex;
+    justify-content: center;
+}
+.logoutBtn{
+    width: 10%;
+    background: none;
+    border: 2px solid navajowhite;
+    color: navajowhite;
+    padding: 5px;
+    font-size: 18px;
+    margin-top: 40px;
+    cursor: pointer;
+    position: fixed;
+    right: 10px;
+    top: 21px;
+    margin-block-start: auto; 
+    border-radius: 10px;
+}
+.container{
+    color: navajowhite;
+    margin-top: 60px;
+}
+
+#addContactBtn{
+    width: 15%;
+    background: none;
+    border: 2px solid navajowhite;
+    color: black;
+    padding: 5px 5px 5px 5px;
+    font-size: 18px;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    right: 83px;
+    top: 75px;
+    margin-block-start: auto; 
+    margin-inline-start: auto;
+    border-radius: 10px;
+}
+
+.viewList{
+    display: flex;
+    justify-content: center;
+}
+
+#noContact{
+    text-align: center;
+    font-size: 25px;
+    color: navajowhite;
+}
+
+.tHead{
+    font-size: 20px;
+    text-align: center;
+}
+td{
+    font-size: 17px;
+    text-align: center;
+}
+.tableBtn{
+    width : 50%;
+    background: none;
+    border: none;
+    color: navajowhite;
+    padding: 5px;
+    font-size: 18px;
+    cursor: pointer;
+}

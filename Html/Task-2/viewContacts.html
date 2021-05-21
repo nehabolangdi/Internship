@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="C:/Users/Vandana/Desktop/Internship/Css/task-2.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <script src="../../Js/task-2.js"></script>
+    <title>Contact List</title>
+  </head>
+  <body>
+    <header>
+      <div class="headerWithLogout">
+        <h1>Contacts</h1>
+        <button
+          class="logoutBtn"
+          onclick="location.href='C:/Users/Vandana/Desktop/Internship/Html/Task-2/loginPage.html';"
+          id="tab"
+        >
+          Logout
+        </button>
+      </div>
+    </header>
+    <div class="container">
+      <div class="viewList">
+        <h3>View Contact List</h3>
+        <button
+          id="addContactBtn"
+          onclick="location.href='C:/Users/Vandana/Desktop/Internship/Html/Task-2/addContact.html';"
+          id="tab"
+        >
+          Add New Contact
+        </button>
+      </div>
+      
+      <div class="viewTable">
+        <table class="table table-bordered">
+          <thead>
+            <th class="tHead">Name</th>
+            <th class="tHead">Contact Number</th>
+            <th class="tHead">Place</th>
+            <th class = "tHead"colspan="2"></th>
+          </thead>
+          <tbody id="myTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <p id="noContact"></p>
+    <script>
+      let table = document.getElementById("myTable");
+      contact = JSON.parse(
+        localStorage.getItem("list : " + sessionStorage.getItem("loginEmail"))
+      );
+      let contactList = [];
+
+      for (let i in contact) {
+        contactList.push(contact[i]);
+      }
+      if(contactList.length == 0) { document.getElementById("noContact").innerHTML = "No contacts to display";}
+      for (let i = 0; i < contactList.length; i++) {
+        let row = `<tr>
+                        <td id = "id" style="display:none;"">${contactList[i].id}</td>
+                        <td>${contactList[i].name}</td>
+                        <td>${contactList[i].number}</td>
+                        <td>${contactList[i].place}</td>
+                        <td><form onsubmit="event.preventDefault(); deleteContact('${contactList[i].id}')">
+                                <input class = "tableBtn" type="submit" value="Delete"  />
+                              </form>
+                        </td>
+                        <td ><form onsubmit=" event.preventDefault(); queryString('${contactList[i].id}','${contactList[i].name}','${contactList[i].number}','${contactList[i].place}')">
+                                <input class = "tableBtn" type="submit" value="Edit"/>
+                              </form>
+                        </td>
+                  </tr>`;
+        table.innerHTML += row;
+      }
+    </script>
+  </body>
+</html>

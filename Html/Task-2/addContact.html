@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    
+    <link
+      rel="stylesheet"
+      href="C:/Users/Vandana/Desktop/Internship/Css/task-2.css"
+    />
+
+    <script src="../../Js/task-2.js"></script>
+
+    <title>Add Contact</title>
+  </head>
+  <body>
+    <header>
+      <div class="headerWithLogout">
+        <h1>Contacts</h1>
+        <button
+          class="logoutBtn"
+          onclick="location.href='C:/Users/Vandana/Desktop/Internship/Html/Task-2/loginPage.html';"
+          id="tab"
+        >
+          Logout
+        </button>
+      </div>
+    </header>
+
+    <div class="context">
+      <h1>Add New Contact</h1>
+      <div class="addContact">
+        <form
+          id="form_id"
+          onsubmit="event.preventDefault(); addOrEditContact()"
+        >
+          <div class="textbox">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" id="contactName" placeholder="Contact Name" />
+          </div>
+          <div class="textbox">
+            <i class="fa fa-phone"></i>
+            <input type="tel" id="contactNumber" placeholder="Contact Number" />
+          </div>
+          <div class="textbox">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <input type="text" id="contactPlace" placeholder="Contact Place" />
+          </div>
+          <input class="btn" type="submit" value="Save Details" />
+        </form>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function (event) {
+        getParameter(window.location.href);
+      };
+      function addOrEditContact() {
+        let url = new URL(window.location.href);
+        let parameter = url.searchParams;
+        let id = parameter.get("id");
+        if (id) {
+          editContact(id);
+        } else {
+          addContact();
+        }
+      }
+    </script>
+  </body>
+</html>

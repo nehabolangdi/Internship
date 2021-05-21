@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Js/task-2.js"></script>
+    <link rel="stylesheet" href="../../Css/task-2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <header>
+      <h1>Contacts</h1>
+    </header>
+
+    <div class="context">
+      <h1>Login</h1>
+      <form onsubmit="event.preventDefault(); validateLogin()">
+        <div class="textbox">
+          <i class="fa fa-user-o"></i>
+          <input type="text" id="validEmail" placeholder="Username" />
+        </div>
+        <div class="textbox">
+          <i class="fa fa-lock"></i>
+          <input type="password" id="validPassowrd" placeholder="Password" />
+        </div>
+        <input class="btn" type="submit" value="Login" class="button" />
+      </form>
+      <hr/>
+      <form action="signUp.html">
+        <input class="btn" type="submit" value="Sign Up" />
+      </form>
+    </div>
+  </body>
+</html>
